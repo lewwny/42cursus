@@ -107,7 +107,7 @@ void	is_shot(t_game *game)
 			_other()->end2 = 1;
 		}
 	}
-	else if (game->join && (_other()->end || _other()->end2))
+	else if (game->join && (!_other()->end && !_other()->end2))
 	{
 		write_result = write(game->sock, "shot", 4);
 		if (write_result < 0)
