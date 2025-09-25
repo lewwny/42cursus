@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Oracle des Éléments - Zodiaque Mystique</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">Zodiaque Mystique</a></h1>
+            <div class="right">
+                <p><a href="index.html">Accueil</a></p>
+                <p><a href="signes.html">Signes</a></p>
+                <p><a href="oracle.html">Oracle des Éléments</a></p>
+                <p><a href="contact.html">Contact</a></p>
+                <button id="btn-decouvrir">Decouvrir mon signe</button>
+                <script src="static/nav.js" defer></script>
+            </div>
+        </nav>
+
+        <section class="presentation oracle-main-content">
+            <div class="oracle-container">
+                <div class="oracle-text-content">
+                    <h1>L'Oracle des Éléments</h1>
+                    <p>
+                        Depuis la nuit des temps, l'univers repose sur quatre forces élémentaires : le Feu ardent, l'Eau profonde, la Terre stable et l'Air libre. Ces énergies vibrent en chacun de nous, influençant notre personnalité et notre destinée à travers notre signe zodiacal. Choisissez l'élément qui vous appelle et découvrez les signes qui partagent cette essence mystique, leurs secrets cachés et les révélations que l'univers souhaite vous transmettre.
+                    </p>
+                </div>
+                
+                <div class="elements-selector">
+                    <!-- FEU -->
+                    <form action="/" method="POST" enctype="application/x-www-form-urlencoded" class="element-card feu">
+                        <input type="hidden" name="element" value="feu">
+                        <button type="submit" class="element-btn">
+                            <img src="fire-zodiac-signs-elements2.jpg" alt="Feu" class="element-icon">
+                            <h3>Feu</h3>
+                            <p>Énergie, passion, créativité. Les signes de Feu sont dynamiques et audacieux.</p>
+                        </button>
+                    </form>
+                
+                    <!-- EAU -->
+                    <form action="/" method="POST" enctype="application/x-www-form-urlencoded" class="element-card eau">
+                        <input type="hidden" name="element" value="eau">
+                        <button type="submit" class="element-btn">
+                            <img src="water-zodiac-signs-elements4.jpg" alt="Eau" class="element-icon">
+                            <h3>Eau</h3>
+                            <p>Émotion, intuition, profondeur. Les signes d'Eau sont sensibles et empathiques.</p>
+                        </button>
+                    </form>
+                
+                    <!-- TERRE -->
+                    <form action="/" method="POST" enctype="application/x-www-form-urlencoded" class="element-card terre">
+                        <input type="hidden" name="element" value="terre">
+                        <button type="submit" class="element-btn">
+                            <img src="earth-zodiac-signs-elements.jpg" alt="Terre" class="element-icon">
+                            <h3>Terre</h3>
+                            <p>Stabilité, praticité, fiabilité. Les signes de Terre sont ancrés et travailleurs.</p>
+                        </button>
+                    </form>
+                
+                    <!-- AIR -->
+                    <form action="/" method="POST" enctype="application/x-www-form-urlencoded" class="element-card air">
+                        <input type="hidden" name="element" value="air">
+                        <button type="submit" class="element-btn">
+                            <img src="air-zodiac-signs-elements3.jpg" alt="Air" class="element-icon">
+                            <h3>Air</h3>
+                            <p>Communication, intellect, adaptabilité. Les signes d'Air sont curieux et sociables.</p>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <style>
+        /* Global adjustments to reduce white space and make elements appear higher */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Removing gap and margin overrides to use main CSS */
+        }
+
+        nav h1 {
+            margin: 0;
+            /* Removing font-size override to use main CSS */
+        }
+
+        nav .right {
+            display: flex;
+            align-items: center;
+            /* Removing gap override to use main CSS */
+        }
+
+        /* Bigger, responsive nav button */
+        nav .right button {
+            padding: 0.6rem 1.2rem;
+            font-size: calc(0.9rem + 0.6vw);
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            background: var(--accent, #6366f1);
+            color: #fff;
+        }
+
+        /* Oracle layout côte à côte */
+        .oracle-main-content {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 1rem 5%;
+        }
+
+        .oracle-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            gap: 20rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .oracle-text-content {
+            flex: 1;
+            max-width: 500px;
+            padding-right: 0;
+            padding-left: 0;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .oracle-text-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #f8fafc, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .oracle-text-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Elements grid: 2x2 layout */
+        .elements-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 2rem;
+            flex: 1;
+            max-width: 500px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .element-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .element-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .element-card:hover::before { 
+            left: 100%; 
+        }
+
+        .element-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 18px 36px rgba(0,0,0,0.18), 0 0 24px rgba(99,102,241,0.18);
+        }
+
+        /* Auras par élément */
+        .element-card.feu   { border-color: rgba(245,158,11,.35);  box-shadow: 0 8px 24px rgba(245,158,11,.18); }
+        .element-card.eau   { border-color: rgba(59,130,246,.35);  box-shadow: 0 8px 24px rgba(59,130,246,.18); }
+        .element-card.terre { border-color: rgba(16,185,129,.35);  box-shadow: 0 8px 24px rgba(16,185,129,.18); }
+        .element-card.air   { border-color: rgba(139,92,246,.35);  box-shadow: 0 8px 24px rgba(139,92,246,.18); }
+        .element-card.feu:hover   { box-shadow: 0 18px 44px rgba(245,158,11,.35); }
+        .element-card.eau:hover   { box-shadow: 0 18px 44px rgba(59,130,246,.38); }
+        .element-card.terre:hover { box-shadow: 0 18px 44px rgba(16,185,129,.38); }
+        .element-card.air:hover   { box-shadow: 0 18px 44px rgba(139,92,246,.38); }
+
+        /* Icons plus petites pour le layout 2x2 */
+        .element-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 0 0.8rem 0;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid var(--glass-border);
+        }
+
+        .element-card h3 {
+            color: var(--text-light);
+            margin: 0.3rem 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .element-card p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .element-details { text-align: center; padding: 1.2rem 0; }
+
+        .signes-by-element {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1.6rem;
+        }
+
+        .signe-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.25s ease;
+        }
+
+        .signe-card:hover { transform: translateY(-4px); }
+
+        @keyframes float { 0%,100%{ transform: translateY(0px);} 50%{ transform: translateY(-8px);} }
+
+        /* Responsive adjustments */
+        @media (max-width: 1100px) {
+            .oracle-container {
+                flex-direction: column;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .oracle-text-content {
+                max-width: 100%;
+                padding-right: 0;
+                padding-left: 0;
+            }
+            
+            .oracle-text-content h1 {
+                font-size: clamp(2.5rem, 7vw, 3.5rem);
+            }
+            
+            .oracle-text-content p {
+                font-size: 1.3rem;
+            }
+            
+            .elements-selector { 
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                max-width: 600px;
+                gap: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .oracle-main-content {
+                padding: 1.5rem 5%;
+                min-height: auto;
+            }
+            
+            .oracle-container {
+                gap: 2rem;
+            }
+            
+            .oracle-text-content h1 {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+            
+            .elements-selector { 
+                grid-template-columns: 1fr; 
+                gap: 1rem;
+                max-width: 300px;
+            }
+            
+            .element-card {
+                min-height: 150px;
+                padding: 1rem;
+            }
+            
+            .element-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            nav { 
+                padding: 0.6rem 1rem; 
+            }
+            nav .right button { 
+                padding: 0.7rem 1rem; 
+            }
+        }
+    </style>
+</body>
+</html>

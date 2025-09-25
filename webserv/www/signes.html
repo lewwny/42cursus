@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="style.css">
+	<title>Signes du Zodiaque - Zodiaque Mystique</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<h1><a href="index.html">Zodiaque Mystique</a></h1>
+			<div class="right">
+				<p><a href="index.html">Accueil</a></p>
+				<p><a href="signes.html">Signes</a></p>
+				<p><a href="oracle.html">Oracle des Éléments</a></p>
+				<p><a href="contact.html">Contact</a></p>
+                <button id="btn-decouvrir">Decouvrir mon signe</button>
+                <script src="static/nav.js" defer></script>
+			</div>
+		</nav>
+
+    <section class="presentation" style="min-height: auto; padding: 1rem 5%;">
+        <div class="Sous-le-voile-des-étoiles" style="max-width: 100%; text-align: center;">
+        <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">Les 12 Signes du Zodiaque</h1>
+        
+        <!-- Formulaire de découverte du signe -->
+        <div class="signe-discovery" style="margin: 3rem auto; max-width: 500px;">
+            <form action="/cgi-bin/php/signe.php" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+                <label for="naissance" style="font-size: 1.2rem; color: var(--text-light); font-weight: 500;">Date de naissance :</label>
+                <input type="text" name="naissance" placeholder="JJ-MM-AAAA" style="padding: 12px 20px; font-size: 16px; border: 1px solid var(--glass-border); border-radius: 25px; background: var(--glass-bg); backdrop-filter: blur(10px); color: var(--text-light); text-align: center; min-width: 200px; transition: all 0.3s ease;">
+                <button type="submit" style="padding: 12px 30px; font-size: 16px; font-weight: 600; background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);">Découvrir mon signe</button>
+            </form>
+        </div>
+        <!--HERE-->
+        <div class="signes-grid">
+            <div class="signe">
+				<h2>Bélier</h2>
+				<p>21 mars - 19 avril</p>
+			</div>
+			<div class="signe">
+				<h2>Taureau</h2>
+				<p>20 avril - 20 mai</p>
+			</div>
+			<div class="signe">
+				<h2>Gémeaux</h2>
+				<p>21 mai - 20 juin</p>
+			</div>
+			<div class="signe">
+				<h2>Cancer</h2>
+				<p>21 juin - 22 juillet</p>
+			</div>
+			<div class="signe">
+				<h2>Lion</h2>
+				<p>23 juillet - 22 août</p>
+			</div>
+			<div class="signe">
+				<h2>Vierge</h2>
+				<p>23 août - 22 septembre</p>
+			</div>
+			<div class="signe">
+				<h2>Balance</h2>
+				<p>23 septembre - 22 octobre</p>
+			</div>
+			<div class="signe">
+				<h2>Scorpion</h2>
+				<p>23 octobre - 21 novembre</p>
+			</div>
+			<div class="signe">
+				<h2>Sagittaire</h2>
+				<p>22 novembre - 21 décembre</p>
+			</div>
+			<div class="signe">
+				<h2>Capricorne</h2>
+				<p>22 décembre - 19 janvier</p>
+			</div>
+			<div class="signe">
+				<h2>Verseau</h2>
+				<p>20 janvier - 18 février</p>
+			</div>
+			<div class="signe">
+				<h2>Poisson</h2>
+				<p>19 février - 20 mars</p>
+			</div>
+        </div>
+        </div>
+    </section>
+</body>
+</html>
