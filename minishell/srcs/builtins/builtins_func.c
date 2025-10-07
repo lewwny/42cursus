@@ -6,7 +6,7 @@
 /*   By: lengarci <lengarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 18:19:24 by lengarci          #+#    #+#             */
-/*   Updated: 2025/06/23 13:39:39 by lengarci         ###   ########.fr       */
+/*   Updated: 2025/10/07 11:45:50 by lengarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ static int	verify_exit_code(char *arg)
 
 void	exit_builtin(void)
 {
+	bool	tmp;
+
 	if (_data()->cmds->args[1] == NULL)
 		_data()->exit_status = 0;
 	else
@@ -56,9 +58,10 @@ void	exit_builtin(void)
 		{
 			write(2, "minishell: exit: too many arguments\n", 37);
 			_data()->exit_status = 1;
+			tmp = true;
 		}
 	}
-	if (_data()->exit_status == 1)
+	if (_data()->exit_status == 1 && tmp)
 	{
 		_data()->exit_code = 1;
 		return ;
